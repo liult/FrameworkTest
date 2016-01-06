@@ -13,6 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <FrameLayout
+        android:id="@+id/fragment_stub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/title"
+        android:background="@android:color/transparent">
+    </FrameLayout>
+
     <android.support.v4.widget.DrawerLayout
         android:layout_below="@+id/title"
         android:id="@+id/drawer_layout"

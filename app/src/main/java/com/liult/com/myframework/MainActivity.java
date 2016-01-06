@@ -3,6 +3,7 @@ package com.liult.com.myframework;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,9 +15,70 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.liult.com.myframework.base.BaseActivity;
+import com.liult.com.myframework.base.FragmentGroupActivity;
 
-public class MainActivity extends BaseActivity
+public class MainActivity extends FragmentGroupActivity
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    @Override
+    protected void initPrimaryFragment() {
+
+    }
+
+    @Override
+    protected Class<? extends Fragment> getPrimaryFragmentClass(int fragmentId) {
+        Class<? extends Fragment> clazz = null;
+        switch (fragmentId) {
+            case TAB_HOME:
+                clazz = HomeFragment.class;
+                break;
+            case TAB_KIND:
+                clazz = CategoryFragment.class;
+                break;
+            case TAB_ORDER:
+                clazz = OrderFragmentGroup.class;
+                break;
+            case TAB_MINE:
+                clazz = MyFragment.class;
+                break;
+
+            default:
+                clazz = CategoryFragment.class;
+        }
+        return clazz;
+    }
+
+    @Override
+    protected Bundle getPrimaryFragmentArguments(int fragmentId) {
+        return null;
+    }
+
+    @Override
+    protected int getPrimaryFragmentStubId(int fragmentId) {
+        return R.id.fragment_stub;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
