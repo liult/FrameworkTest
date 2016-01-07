@@ -5,4 +5,14 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!--首页文字-->
+    <string name="tab_home_text">home</string>
+    <string name="tab_kind_text">kind</string>
+    <string name="tab_order_text">order</string>
+    <string name="tab_mine_text">mine</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+
+
 </resources>

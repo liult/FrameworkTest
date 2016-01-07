@@ -17,4 +17,17 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+
+    <style name="TabStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <!--<item name="android:textColor">@drawable/tab_text_color_selector</item>
+        <item name="android:textSize">@dimen/font_size13</item>
+        <item name="android:colorBackground">@drawable/tab_backgroud_color_selector</item>
+        -->
+    </style>
+
+
 </resources>

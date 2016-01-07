@@ -1,43 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    android:layout_height="wrap_content" >
 
-    <include
-        android:id="@+id/title"
-        layout="@layout/base_title_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent" >
+    </android.support.v7.widget.Toolbar>
+
 
     <FrameLayout
+        android:layout_below="@+id/toolbar"
         android:id="@+id/fragment_stub"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignWithParentIfMissing="true"
-        android:layout_below="@+id/title"
+        android:layout_above="@+id/tab_menu"
         android:background="@android:color/transparent">
     </FrameLayout>
 
-    <android.support.v4.widget.DrawerLayout
-        android:layout_below="@+id/title"
-        android:id="@+id/drawer_layout"
+    <LinearLayout
+        android:id="@+id/tab_menu"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        tools:openDrawer="start">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <ImageButton
+            android:id="@+id/tab_home"
+            android:background="@null"
+            android:src="@drawable/tab_home_unselected"
+            style="@style/TabStyle"/>
+        <ImageButton
+            android:id="@+id/tab_kind"
+            android:background="@null"
+            android:src="@drawable/tab_kind_unselected"
+            style="@style/TabStyle"/>
+        <ImageButton
+            android:id="@+id/tab_order"
+            android:background="@null"
+            android:src="@drawable/tab_order_unselected"
+            style="@style/TabStyle"/>
+        <ImageButton
+            android:id="@+id/tab_mine"
+            android:background="@null"
+            android:src="@drawable/tab_mine_unselected"
+            style="@style/TabStyle"/>
 
-        <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            app:headerLayout="@layout/nav_header_main"
-            app:menu="@menu/activity_main_drawer"/>
-
-    </android.support.v4.widget.DrawerLayout>
+    </LinearLayout>
 </RelativeLayout>
