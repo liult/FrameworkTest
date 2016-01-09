@@ -12,8 +12,23 @@
         android:text="@string/tab_home_text"/>
     <Button
         android:id="@+id/btn"
-        android:text="dianji"
+        android:text="itemlistActivity"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/btn2"
+        android:text="main2activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/btn3"
+        android:text="settingactivity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <Button
+        android:id="@+id/btn4"
+        android:text="scrollingactivity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
 </LinearLayout>

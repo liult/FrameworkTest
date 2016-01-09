@@ -14,6 +14,9 @@ import android.widget.Toast;
 import com.liult.com.myframework.R;
 import com.liult.com.myframework.base.BaseFragment;
 import com.liult.com.myframework.base.ItemListActivity;
+import com.liult.com.myframework.base.Main2Activity;
+import com.liult.com.myframework.base.ScrollingActivity;
+import com.liult.com.myframework.base.SettingsActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -49,9 +52,24 @@ public class HomeFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    @OnClick(R.id.btn)
-    public void onWidgetClick(){
-        getActivity().startActivity(new Intent(getActivity(), ItemListActivity.class));
+    @OnClick({R.id.btn, R.id.btn2, R.id.btn3, R.id.btn4})
+    public void onWidgetClick(View view){
+        switch (view.getId()){
+            case R.id.btn:
+                getActivity().startActivity(new Intent(getActivity(), ItemListActivity.class));
+                break;
+            case R.id.btn2:
+                getActivity().startActivity(new Intent(getActivity(), Main2Activity.class));
+                break;
+            case R.id.btn3:
+                getActivity().startActivity(new Intent(getActivity(), SettingsActivity.class));
+                break;
+            case R.id.btn4:
+                getActivity().startActivity(new Intent(getActivity(), ScrollingActivity.class));
+                break;
+            default:
+                break;
+        }
     }
 //    @OnClick(R.id.btn)
 //    public void onWidgetClick(View view) {
