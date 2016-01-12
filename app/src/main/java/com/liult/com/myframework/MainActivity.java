@@ -8,6 +8,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.igexin.sdk.PushManager;
 import com.liult.com.myframework.base.FragmentGroupActivity;
 import com.liult.com.myframework.fragment.HomeFragment;
 import com.liult.com.myframework.fragment.KindFragment;
@@ -60,10 +62,22 @@ public class MainActivity extends FragmentGroupActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        registerPushToken();
+        findViewById(R.id.left_tv).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
 
         switchTab(TAB_HOME);
+    }
+
+    private void registerPushToken() {
+        PushManager.getInstance().initialize(this.getApplicationContext());
+//        String clientId = PushManager.getInstance().getClientid(getApplicationContext());
     }
 
     @OnClick({R.id.tab_home, R.id.tab_kind, R.id.tab_order, R.id.tab_mine})

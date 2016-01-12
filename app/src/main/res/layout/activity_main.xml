@@ -6,11 +6,14 @@
     android:clipToPadding="true"
     android:layout_height="wrap_content" >
 
+    <include
+        layout="@layout/base_div_title_bar"/>
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:layout_width="match_parent" >
+        android:layout_width="match_parent"
+        android:visibility="gone">
     </android.support.v7.widget.Toolbar>
 
 
@@ -34,22 +37,22 @@
             android:id="@+id/tab_home"
             android:background="@null"
             android:src="@drawable/tab_home_unselected"
-            style="@style/TabStyle"/>
+            style="@style/tabStyle"/>
         <ImageButton
             android:id="@+id/tab_kind"
             android:background="@null"
             android:src="@drawable/tab_kind_unselected"
-            style="@style/TabStyle"/>
+            style="@style/tabStyle"/>
         <ImageButton
             android:id="@+id/tab_order"
             android:background="@null"
             android:src="@drawable/tab_order_unselected"
-            style="@style/TabStyle"/>
+            style="@style/tabStyle"/>
         <ImageButton
             android:id="@+id/tab_mine"
             android:background="@null"
             android:src="@drawable/tab_mine_unselected"
-            style="@style/TabStyle"/>
+            style="@style/tabStyle"/>
 
     </LinearLayout>
 </RelativeLayout>

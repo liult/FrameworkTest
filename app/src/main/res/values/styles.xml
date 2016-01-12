@@ -18,7 +18,8 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 
-    <style name="TabStyle">
+    <!--首页tab样式-->
+    <style name="tabStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
@@ -29,5 +30,14 @@
         -->
     </style>
 
+    <!--div title样式-->
+    <style name="divTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">@dimen/font_size15</item>
+        <item name="android:background">@drawable/view_click_background</item>
+    </style>
 
 </resources>
