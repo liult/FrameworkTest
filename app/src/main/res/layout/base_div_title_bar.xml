@@ -5,8 +5,6 @@
               android:layout_height="?attr/actionBarSize" >
     <TextView
         android:id="@+id/left_tv"
-        android:drawableLeft="@drawable/icon_arrow_back"
-        android:text="标题"
         style="@style/divTitleStyle"
         android:drawablePadding="5dp"
         android:paddingLeft="15dp"
@@ -15,15 +13,12 @@
     <TextView
         android:id="@+id/title_tv"
         style="@style/divTitleStyle"
-        android:text="标题"
         android:layout_centerInParent="true"/>
 
 
     <TextView
         android:id="@+id/right_tv"
         style="@style/divTitleStyle"
-        android:drawableRight="@drawable/icon_arrow_back"
-        android:text="标题"
         android:layout_alignParentRight="true"
         android:drawablePadding="5dp"
         android:paddingLeft="15dp"

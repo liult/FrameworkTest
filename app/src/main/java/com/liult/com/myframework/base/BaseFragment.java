@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.liult.com.myframework.R;
 import com.liult.com.myframework.utils.DataUtil;
@@ -19,6 +20,7 @@ import retrofit.Response;
 import retrofit.Retrofit;
 
 /**
+ * fragment 基类
  * Created by zhilian-2 on 2016/1/7.
  */
 public class BaseFragment extends Fragment implements Callback {
@@ -82,7 +84,12 @@ public class BaseFragment extends Fragment implements Callback {
                 rightTv.setText(rightText);
             }
         }
-
+        leftTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getActivity(), "click", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 

@@ -4,6 +4,8 @@
               android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <include
+        layout="@layout/base_div_title_bar"/>
 
     <Button
         android:id="@+id/btn_service"
