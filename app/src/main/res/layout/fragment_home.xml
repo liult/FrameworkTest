@@ -5,11 +5,11 @@
     android:orientation="vertical">
 
 
-    <TextView
+    <Button
+        android:id="@+id/btn_service"
+        android:text="retrofit_service"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:gravity="center"
-        android:text="@string/tab_home_text"/>
+        android:layout_height="50dp"/>
     <Button
         android:id="@+id/btn"
         android:text="itemlistActivity"
