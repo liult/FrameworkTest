@@ -1,7 +1,9 @@
 package com.liult.com.myframework.rest;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.squareup.okhttp.Interceptor;
+import com.squareup.okhttp.OkHttpClient;
+
+import java.io.IOException;
 
 import retrofit.GsonConverterFactory;
 import retrofit.Retrofit;

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_svprogresshuddefault"
+        android:gravity="center"
+        android:minWidth="@dimen/size_minwidth_svprogresshuddefault"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_svprogresshuddefault">
+
+        <com.extras.com.progress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            wheel:matProg_barColor="#5588FF"
+            wheel:matProg_progressIndeterminate="true" />
+        <com.extras.com.progress.ProgressWheel
+            android:id="@+id/interpolated"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            wheel:matProg_barColor="#5588FF"
+            wheel:matProg_fillRadius="false" />
+        <com.extras.com.progress.ProgressWheel
+            android:id="@+id/linear"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            wheel:matProg_barColor="#5588FF"
+            wheel:matProg_fillRadius="false"
+            wheel:matProg_linearProgress="true" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margintop_svprogresshuddefault_msg"
+            android:gravity="center"
+            android:textColor="@color/textColor_svprogresshuddefault_msg"
+            android:textSize="@dimen/textSize_svprogresshuddefault_msg"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FrameworkTest.iml" filepath="$PROJECT_DIR$/FrameworkTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/HelpUtilsLibrary.iml" filepath="$PROJECT_DIR$/extras/HelpUtilsLibrary/HelpUtilsLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/extras/extras.iml" filepath="$PROJECT_DIR$/extras/extras.iml" />
     </modules>
   </component>
 </project>

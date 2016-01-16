@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/liult/com/myframework/fragment/ChildAnimationExample.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/liult/com/myframework/fragment/TransformerAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/bigbang.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/bird.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/d1.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/game_of_thrones.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/hannibal.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-hdpi/house.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Animations/BaseAnimationInterface.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Animations/DescriptionAnimation.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Indicators/PagerIndicator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/SliderAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/SliderLayout.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/SliderTypes/BaseSliderView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/SliderTypes/DefaultSliderView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/SliderTypes/TextSliderView.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/AccordionTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/BackgroundToForegroundTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/BaseTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/CubeInTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/DefaultTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/DepthPageTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/FadeTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/FlipHorizontalTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/FlipPageViewTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/ForegroundToBackgroundTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/RotateDownTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/RotateUpTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/StackTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/TabletTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/ZoomInTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/ZoomOutSlideTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Transformers/ZoomOutTransformer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Tricks/FixedSpeedScroller.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Tricks/InfinitePagerAdapter.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Tricks/InfiniteViewPager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/java/com/extras/com/slideBanner/Tricks/ViewPagerEx.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/res/drawable/indicator_corner_bg.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/res/layout/indicator_layout.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/res/layout/render_type_default.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/res/layout/render_type_text.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/extras/HelpUtilsLibrary/src/main/res/layout/slider_layout.xml" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -16,6 +16,7 @@ import com.liult.com.myframework.base.ScrollingActivity;
 import com.liult.com.myframework.base.SettingsActivity;
 import com.liult.com.myframework.moudle.AppConfigs;
 import com.liult.com.myframework.rest.RetrofitDataService;
+import com.liult.com.myframework.utils.UiUtil;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -48,7 +49,8 @@ public class HomeFragment extends BaseFragment{
     public void onWidgetClick(View view){
         switch (view.getId()){
             case R.id.btn_service:
-                Call<AppConfigs> response = RetrofitDataService.getInstance().mResetService.getAppConfig(token);
+                showMaterialProgress("加载中...");
+                Call<AppConfigs> response = RetrofitDataService.getInstance().mResetService.getAppConfig("test", token);
                 response.enqueue(this);
                 break;
             case R.id.btn:
@@ -67,11 +69,6 @@ public class HomeFragment extends BaseFragment{
                 break;
         }
     }
-//    @OnClick(R.id.btn)
-//    public void onWidgetClick(View view) {
-//        Toast.makeText(getActivity(), "hah ", Toast.LENGTH_SHORT).show();
-//        getActivity().startActivity(new Intent(getActivity(), ItemListActivity.class));
-//    }
 
 
     @Override
@@ -82,6 +79,7 @@ public class HomeFragment extends BaseFragment{
     @Override
     public void onResponse(Response response, Retrofit retrofit) {
         super.onResponse(response, retrofit);
+        hideMaterialProgress();
         if (response.body() instanceof AppConfigs){
             Toast.makeText(getActivity(), "response:"+((AppConfigs)response.body()).app_config.getCustomer_service_tel(), Toast.LENGTH_SHORT).show();
         }
@@ -91,5 +89,7 @@ public class HomeFragment extends BaseFragment{
     @Override
     public void onFailure(Throwable t) {
         super.onFailure(t);
+        hideMaterialProgress();
+        UiUtil.showToast(getActivity(), "失败：" + t.getMessage());
     }
 }

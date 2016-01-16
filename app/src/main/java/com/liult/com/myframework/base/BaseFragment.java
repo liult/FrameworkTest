@@ -11,20 +11,24 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.extras.com.progress.SVProgressHUD;
 import com.liult.com.myframework.R;
+import com.liult.com.myframework.appInterface.AppBaseInterface;
 import com.liult.com.myframework.utils.DataUtil;
 
 import butterknife.ButterKnife;
 import retrofit.Callback;
 import retrofit.Response;
 import retrofit.Retrofit;
+import retrofit.http.GET;
 
 /**
  * fragment 基类
  * Created by zhilian-2 on 2016/1/7.
  */
-public class BaseFragment extends Fragment implements Callback {
+public class BaseFragment extends Fragment implements AppBaseInterface {
 
+    private SVProgressHUD mSVProgressHUD;
     private TextView leftTv, titleTv, rightTv;
 
     @Override
@@ -38,15 +42,7 @@ public class BaseFragment extends Fragment implements Callback {
 
     }
 
-    /**
-     * 设置fragment自定义头部信息
-     * @param view fragmnet  view
-     * @param leftImageResourceId 左按钮图片资源
-     * @param leftText 左边按钮左边文字
-     * @param title 中间文字
-     * @param rightImageResourceId 有按钮图片资源
-     * @param rightText 有按钮文字
-     */
+    @Override
     public void initTitle(View view, int leftImageResourceId, String leftText,
                           String title, int rightImageResourceId, String rightText){
         leftTv = (TextView) view.findViewById(R.id.left_tv);
@@ -92,7 +88,35 @@ public class BaseFragment extends Fragment implements Callback {
         });
     }
 
+    @Override
+    public void showMaterialProgress(String text) {
+        if (!isAdded()) return;
+        if (mSVProgressHUD == null)
+            mSVProgressHUD= new SVProgressHUD(getActivity());
+        mSVProgressHUD.showMaterialishProgress(text);
+    }
 
+    @Override
+    public void hideMaterialProgress() {
+        if (mSVProgressHUD == null) return;
+        mSVProgressHUD.dismissImmediately();
+    }
+
+    @Override
+    public View getDivTitleLeftView() {
+        return leftTv;
+    }
+
+    @Override
+    public View getDivTitleRightView() {
+        return rightTv;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        ButterKnife.unbind(this);
+    }
     @Override
     public void onResponse(Response response, Retrofit retrofit) {
 
@@ -103,9 +127,4 @@ public class BaseFragment extends Fragment implements Callback {
 
     }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        ButterKnife.unbind(this);
-    }
 }

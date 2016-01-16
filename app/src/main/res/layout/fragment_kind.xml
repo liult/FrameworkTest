@@ -2,16 +2,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-    android:orientation="horizontal">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/tab_kind_text"/>
+              android:orientation="vertical">
+
     <Button
-        android:id="@+id/btn"
-        android:text="dianji"
+        android:id="@+id/btn_1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="hey,alert !!!click here~~~"/>
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="hey,alert !!!click here~~~"/>
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="hey,alert !!!click here~~~"/>
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="hey,actionsheet !!!click here~~~"/>
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="hey,actionsheet !!!click here~~~"/>
+
+    <Button
+        android:id="@+id/btn_6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="hey,actionsheet !!!click here~~~"/>
+
+    <Button
+        android:id="@+id/btn_7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="窗口拓展点这里"/>
 
 </LinearLayout>
