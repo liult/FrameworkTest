@@ -1,22 +1,24 @@
 package com.liult.com.myframework.fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
-import com.extras.com.pullToRefresh.PtrClassicFrameLayout;
-import com.extras.com.pullToRefresh.PtrDefaultHandler;
 import com.extras.com.pullToRefresh.PtrFrameLayout;
 import com.extras.com.pullToRefresh.PtrHandler;
 import com.extras.com.pullToRefresh.header.MaterialHeader;
+import com.extras.com.pullToRefresh.recyclerView.AutoLoadMoreRecyclerView;
+import com.extras.com.utils.DensityUtils;
 import com.liult.com.myframework.R;
 import com.liult.com.myframework.adapter.MineRecyclerAdapter;
 import com.liult.com.myframework.base.BaseFragment;
-import com.liult.com.myframework.utils.DataUtil;
+import com.liult.com.myframework.utils.UiUtil;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -27,7 +29,7 @@ import butterknife.ButterKnife;
 public class MineFragment extends BaseFragment {
 
     @Bind(R.id.recyclerView)
-    RecyclerView recyclerView;
+    ListView recyclerView;
     @Bind(R.id.material_style_ptr_frame)
     PtrFrameLayout mPtrFrameLayout;
 
@@ -44,15 +46,28 @@ public class MineFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.fragment_mine, null);
         ButterKnife.bind(this, view);
         mMineRecyclerAdapter = new MineRecyclerAdapter(getActivity());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        recyclerView.setAdapter(mMineRecyclerAdapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+//        recyclerView.setAdapter(mMineRecyclerAdapter);
+//        recyclerView.setOnLoadMoreListener(new AutoLoadMoreRecyclerView.OnLoadMoreListener() {
+//            @Override
+//            public void onLoadMore() {
+//                UiUtil.showToast(getActivity(), "加载更多");
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        recyclerView.onLoadMoreComplete();
+//                    }
+//                }, 2000);
+//            }
+//        });
 
         // header
         final MaterialHeader header = new MaterialHeader(getContext());
         int[] colors = getResources().getIntArray(R.array.google_colors);
         header.setColorSchemeColors(colors);
         header.setLayoutParams(new PtrFrameLayout.LayoutParams(-1, -2));
-        header.setPadding(0, DataUtil.dp2px(15), 0, DataUtil.dp2px(10));
+        header.setPadding(0, DensityUtils.dp2px(getActivity(), 15), 0,
+                DensityUtils.dp2px(getActivity(), 10));
         header.setPtrFrameLayout(mPtrFrameLayout);
 
         mPtrFrameLayout.setLoadingMinTime(1000);

@@ -7,14 +7,17 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.extras.com.utils.DataUtil;
 import com.liult.com.myframework.R;
 import com.liult.com.myframework.appInterface.AppBaseInterface;
-import com.liult.com.myframework.utils.DataUtil;
 import com.liult.com.myframework.utils.UiUtil;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
-import retrofit.Response;
-import retrofit.Retrofit;
+import java.io.IOException;
+
+import okhttp3.Request;
+import retrofit2.Response;
+
 
 public class BaseActivity extends AppCompatActivity implements AppBaseInterface{
 
@@ -107,7 +110,7 @@ public class BaseActivity extends AppCompatActivity implements AppBaseInterface{
     }
 
     @Override
-    public void onResponse(Response response, Retrofit retrofit) {
+    public void onResponse(Response response) {
 
     }
 

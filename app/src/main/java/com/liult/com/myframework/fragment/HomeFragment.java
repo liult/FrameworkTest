@@ -20,9 +20,8 @@ import com.liult.com.myframework.utils.UiUtil;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import retrofit.Call;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit2.Call;
+import retrofit2.Response;
 
 /**
  * Created by zhilian-2 on 2016/1/7.
@@ -77,8 +76,8 @@ public class HomeFragment extends BaseFragment{
     }
 
     @Override
-    public void onResponse(Response response, Retrofit retrofit) {
-        super.onResponse(response, retrofit);
+    public void onResponse(Response response) {
+        super.onResponse(response);
         hideMaterialProgress();
         if (response.body() instanceof AppConfigs){
             Toast.makeText(getActivity(), "response:"+((AppConfigs)response.body()).app_config.getCustomer_service_tel(), Toast.LENGTH_SHORT).show();

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.liult.com.myframework.R;
 
@@ -27,7 +28,7 @@ public class MineRecyclerAdapter extends RecyclerView.Adapter<MineRecyclerAdapte
 
     @Override
     public void onBindViewHolder(Holder holder, int position) {
-
+        holder.tv.setText("position:" + position);
     }
 
 
@@ -39,8 +40,11 @@ public class MineRecyclerAdapter extends RecyclerView.Adapter<MineRecyclerAdapte
 
     public class Holder extends RecyclerView.ViewHolder{
 
+        public TextView tv;
         public Holder(View itemView) {
             super(itemView);
+            tv = (TextView) itemView.findViewById(R.id.tv);
+
 
         }
     }

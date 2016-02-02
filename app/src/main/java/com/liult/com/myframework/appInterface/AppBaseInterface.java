@@ -1,9 +1,9 @@
 package com.liult.com.myframework.appInterface;
 
-import android.content.Context;
 import android.view.View;
 
-import retrofit.Callback;
+import retrofit2.Callback;
+
 
 /**
  * 基类接口

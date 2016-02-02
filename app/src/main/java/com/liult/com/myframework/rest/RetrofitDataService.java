@@ -1,13 +1,11 @@
 package com.liult.com.myframework.rest;
 
-import com.squareup.okhttp.Interceptor;
-import com.squareup.okhttp.OkHttpClient;
 
-import java.io.IOException;
-
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
-import retrofit.RxJavaCallAdapterFactory;
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.GsonConverterFactory;
+import retrofit2.Retrofit;
+import retrofit2.RxJavaCallAdapterFactory;
 
 /**
  * retrofit初始化工具类
@@ -24,6 +22,7 @@ public class RetrofitDataService {
                 .baseUrl(RELEASE_ENDPOINT)
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient())
                 .build();
         mResetService = builder.create(RetrofitResetService.class);
     }
@@ -34,5 +33,17 @@ public class RetrofitDataService {
         }
         return sInstance;
     }
+
+    /**
+     * 创建okhttpclient
+     */
+    private OkHttpClient okHttpClient(){
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        logging.setLevel(HttpLoggingInterceptor.Level.HEADERS);
+        HttpLoggingInterceptor logging2 = new HttpLoggingInterceptor();
+        logging2.setLevel(HttpLoggingInterceptor.Level.BODY);
+        return new OkHttpClient.Builder().addInterceptor(logging2).build();
+    }
+
 
 }

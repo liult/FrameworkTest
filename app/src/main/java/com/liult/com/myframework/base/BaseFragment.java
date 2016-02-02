@@ -2,25 +2,18 @@ package com.liult.com.myframework.base;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.extras.com.progress.SVProgressHUD;
+import com.extras.com.utils.DataUtil;
 import com.liult.com.myframework.R;
 import com.liult.com.myframework.appInterface.AppBaseInterface;
-import com.liult.com.myframework.utils.DataUtil;
 
 import butterknife.ButterKnife;
-import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
-import retrofit.http.GET;
+import retrofit2.Response;
 
 /**
  * fragment 基类
@@ -117,8 +110,9 @@ public class BaseFragment extends Fragment implements AppBaseInterface {
         super.onDestroy();
         ButterKnife.unbind(this);
     }
+
     @Override
-    public void onResponse(Response response, Retrofit retrofit) {
+    public void onResponse(Response response) {
 
     }
 
