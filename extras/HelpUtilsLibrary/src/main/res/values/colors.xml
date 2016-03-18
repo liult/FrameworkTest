@@ -33,4 +33,10 @@
     <color name="roundColor_svprogresshuddefault">#e5e5e5</color>
     <color name="roundProgressColor_svprogresshuddefault">@android:color/black</color>
 
+
+    <color name="orange">#fe5a1d</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#666666</color>
+    <color name="dark_black">#000000</color>
+
 </resources>

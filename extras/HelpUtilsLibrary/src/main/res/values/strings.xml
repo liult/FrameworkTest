@@ -12,4 +12,6 @@
     <string name="cube_ptr_seconds_ago">&#160;seconds ago</string>
     <string name="cube_ptr_minutes_ago">&#160;minutes ago</string>
     <string name="cube_ptr_hours_ago">&#160;hours ago</string>
+
+    <string name="loading">加载中...</string>
 </resources>
