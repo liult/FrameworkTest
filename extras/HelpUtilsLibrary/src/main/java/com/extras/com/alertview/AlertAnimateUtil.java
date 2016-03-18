@@ -8,7 +8,6 @@ import com.extras.com.R;
  * liult2016年1月15日
  */
 public class AlertAnimateUtil {
-
     private static final int INVALID = -1;
     /**
      * Get default animation resource when not defined by the user
