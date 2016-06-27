@@ -3,9 +3,9 @@ package com.liult.com.myframework.rest;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.GsonConverterFactory;
 import retrofit2.Retrofit;
-import retrofit2.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * retrofit初始化工具类
@@ -39,10 +39,15 @@ public class RetrofitDataService {
      */
     private OkHttpClient okHttpClient(){
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-        logging.setLevel(HttpLoggingInterceptor.Level.HEADERS);
-        HttpLoggingInterceptor logging2 = new HttpLoggingInterceptor();
-        logging2.setLevel(HttpLoggingInterceptor.Level.BODY);
-        return new OkHttpClient.Builder().addInterceptor(logging2).build();
+        // set your desired log level
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        // add your other interceptors …
+
+        // add logging as last interceptor
+        httpClient.addInterceptor(logging);  // <-- this is the important line!
+        return httpClient.build();
     }
 
 

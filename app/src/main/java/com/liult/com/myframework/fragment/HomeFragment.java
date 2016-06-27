@@ -76,18 +76,17 @@ public class HomeFragment extends BaseFragment{
     }
 
     @Override
-    public void onResponse(Response response) {
-        super.onResponse(response);
+    public void onResponse(Call call, Response response) {
+        super.onResponse(call, response);
         hideMaterialProgress();
         if (response.body() instanceof AppConfigs){
             Toast.makeText(getActivity(), "response:"+((AppConfigs)response.body()).app_config.getCustomer_service_tel(), Toast.LENGTH_SHORT).show();
         }
-
     }
 
     @Override
-    public void onFailure(Throwable t) {
-        super.onFailure(t);
+    public void onFailure(Call call, Throwable t) {
+        super.onFailure(call, t);
         hideMaterialProgress();
         UiUtil.showToast(getActivity(), "失败：" + t.getMessage());
     }

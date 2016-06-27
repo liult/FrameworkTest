@@ -13,6 +13,7 @@ import com.liult.com.myframework.R;
 import com.liult.com.myframework.appInterface.AppBaseInterface;
 
 import butterknife.ButterKnife;
+import retrofit2.Call;
 import retrofit2.Response;
 
 /**
@@ -112,13 +113,12 @@ public class BaseFragment extends Fragment implements AppBaseInterface {
     }
 
     @Override
-    public void onResponse(Response response) {
+    public void onResponse(Call call, Response response) {
 
     }
 
     @Override
-    public void onFailure(Throwable t) {
+    public void onFailure(Call call, Throwable t) {
 
     }
-
 }

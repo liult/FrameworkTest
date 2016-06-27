@@ -13,9 +13,7 @@ import com.liult.com.myframework.appInterface.AppBaseInterface;
 import com.liult.com.myframework.utils.UiUtil;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
-import java.io.IOException;
-
-import okhttp3.Request;
+import retrofit2.Call;
 import retrofit2.Response;
 
 
@@ -110,12 +108,12 @@ public class BaseActivity extends AppCompatActivity implements AppBaseInterface{
     }
 
     @Override
-    public void onResponse(Response response) {
+    public void onResponse(Call call, Response response) {
 
     }
 
     @Override
-    public void onFailure(Throwable t) {
+    public void onFailure(Call call, Throwable t) {
 
     }
 }
